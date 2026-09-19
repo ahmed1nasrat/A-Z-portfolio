@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A&Z — Small team, big results</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..900;1,9..40,400..900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="logo">
+    <span class="logo-dot"></span>
+    A&Z
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Overview</a></li>
+    <li><a href="#">Project & Experience</a></li>
+    <li><a href="#">Statistics</a></li>
+  </ul>
+  <button class="nav-cta">
+    Contact US
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
+    </svg>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="small-team" id="smallTeam">
+    <span class="word"><span>Small</span></span>&nbsp;<span class="word"><span>team,</span></span>
+  </h1>
+
+  <div class="big-results-wrap">
+    <div class="big-results" id="bigResults">
+      <span class="letter">b</span><span class="letter">i</span><span class="letter">g</span><span class="letter">&nbsp;</span><span class="letter">r</span><span class="letter">e</span><span class="letter">s</span><span class="letter">u</span><span class="letter">l</span><span class="letter">t</span><span class="letter">s</span>
+    </div>
+  </div>
+
+  <!-- Card row of portraits -->
+  <div class="cards-row" id="cardsRow">
+    <div class="card card-4 tech-csharp" data-rot="-9" data-depth="14">
+      <img src="assets/tech/csharp.svg" alt="C# logo" />
+      <span class="card-label">C#</span>
+    </div>
+    <div class="card card-5 tech-dotnet" data-rot="-5" data-depth="10">
+      <img src="assets/tech/dotnet.svg" alt="ASP.NET logo" />
+      <span class="card-label">ASP.NET</span>
+    </div>
+    <div class="card card-6 tech-angular" data-rot="-2" data-depth="8">
+      <img src="assets/tech/angular.svg" alt="Angular logo" />
+      <span class="card-label">Angular</span>
+    </div>
+    <div class="card card-1 tech-html" data-rot="3" data-depth="12">
+      <img src="assets/tech/html5.svg" alt="HTML5 logo" />
+      <span class="card-label">HTML</span>
+    </div>
+    <div class="card card-2 tech-css" data-rot="0" data-depth="6">
+      <img src="assets/tech/css3.svg" alt="CSS3 logo" />
+      <span class="card-label">CSS</span>
+    </div>
+    <div class="card card-3 tech-js" data-rot="4" data-depth="11">
+      <img src="assets/tech/javascript.svg" alt="JavaScript logo" />
+      <span class="card-label">JavaScript</span>
+    </div>
+    <div class="card card-7 tech-python" data-rot="7" data-depth="9">
+      <img src="assets/tech/python.svg" alt="Python logo" />
+      <span class="card-label">Python</span>
+    </div>
+    <div class="card card-8 tech-cyber" data-rot="-4" data-depth="13">
+      <img src="assets/tech/cybersecurity.svg" alt="Cyber security shield logo" />
+      <span class="card-label">Cyber Security</span>
+    </div>
+  </div>
+
+  <div class="subline" id="subline">
+    <button class="arrow-pill">
+      <span class="ar">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="7" y1="17" x2="17" y2="7" />
+          <polyline points="7 7 17 7 17 17" />
+        </svg>
+      </span>
+    </button>
+    <div class="subline-text"></div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2: TEAM GRID ============ -->
+<section class="team-section">
+  <div class="team-head">
+    <div>
+      <div class="eyebrow">FULL-STACK DEVELOPMENT ARCHITECTURE</div>
+      <h2>Scalable Integration<br />of <em>Modern Frameworks</em> and <em>Secure Code</em>.</h2>
+    </div>
+  </div>
+
+  <!-- ============ PROJECTS GRID ============ -->
+  <div class="projects-grid" id="projectsGrid">
+    <article class="p-card p-api">
+      <div class="p-top">
+     
+      </div>
+      <h4>Shura Baynahum — Consulting Platform</h4>
+      <p>Scalable RESTful APIs for the Hajj, catering and risk-management sectors, serving 1,000+ concurrent requests — JWT/RBAC security with zero unauthorized-access incidents and ~35% faster queries.</p>
+      <div class="p-tags">
+        <span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span><span>Web API</span><span>JWT</span>
+      </div>
+      <a class="p-link" href="https://shora.sa" target="_blank" rel="noopener">Visit site ↗</a>
+    </article>
+
+    <article class="p-card p-web">
+      <div class="p-top">
+    
+      </div>
+      <h4>Shura Baynahum — ISO Certification Platform</h4>
+      <p>End-to-end certification management for ISO 9001, 14001, 22000 and 45001 — from application to issuance, with a public certificate-verification module and an optimized Angular SSR frontend.</p>
+      <div class="p-tags">
+        <span>ASP.NET Core</span><span>Angular</span><span>TypeScript</span><span>SQL Server</span><span>JWT</span><span>Bootstrap</span>
+      </div>
+      <a class="p-link" href="https://shoraiso.sa" target="_blank" rel="noopener">Visit site ↗</a>
+    </article>
+
+    <article class="p-card p-api">
+      <div class="p-top">
+
+      </div>
+      <h4>Middle East for Catering — Corporate Website</h4>
+      <p>The company's main website guiding customers through its full range of catering services — REST APIs for listings, inquiries and consultations, secured admin areas, and fast SQL Server schemas.</p>
+      <div class="p-tags">
+        <span>ASP.NET Core</span><span>Web API</span><span>Angular</span><span>SQL Server</span><span>JWT</span>
+      </div>
+      <a class="p-link" href="https://middleeast.sa" target="_blank" rel="noopener">Visit site ↗</a>
+    </article>
+
+ 
+
+    <article class="p-card p-web">
+      <div class="p-top">
+     
+      </div>
+      <h4>Dexer — E-commerce Platform</h4>
+      <p>Full-stack store pairing an Angular SSR frontend with an ASP.NET Core API, serving hundreds of daily users — Google OAuth and JWT cut account-related support tickets by 30%.</p>
+      <div class="p-tags">
+        <span>Angular</span><span>TypeScript</span><span>ASP.NET Core</span><span>OAuth</span><span>SQL Server</span><span>Bootstrap 5</span>
+      </div>
+      <a class="p-link" href="https://dexer.com" target="_blank" rel="noopener">Visit site ↗</a>
+    </article>
+
+    <article class="p-card p-ai">
+      <div class="p-top">
+        
+      </div>
+      <h4>NCGR — National-Scale Platform</h4>
+      <p>Contributed to a national-scale platform with wide public usage — ASP.NET Core APIs and Angular frontend components, optimized SQL Server and Oracle schemas, delivered in Agile/Scrum.</p>
+      <div class="p-tags">
+        <span>ASP.NET Core</span><span>Angular</span><span>SQL Server</span><span>Oracle</span>
+      </div>
+      <a class="p-link" href="https://ncgr.gov.sa" target="_blank" rel="noopener">Visit site ↗</a>
+    </article>
+  </div>
+
+
+</section>
+
+<!-- ============ SECTION 3: STATS ============ -->
+<section class="stats">
+  <div class="stats-inner">
+    <h3>Our Work,<br /> <em>In Numbers</em>.</h3>
+    <div class="stat-block">
+      <div class="num" data-count="5"><span>0</span></div>
+      <div class="lbl">Projects shipped</div>
+    </div>
+    <div class="stat-block">
+      <div class="num" data-count="2"><span>0</span><small>yrs</small></div>
+      <div class="lbl">Years Of Experience</div>
+    </div>
+    <div class="stat-block">
+      <div class="num" data-count="100"><span>0</span><small>%</small></div>
+      <div class="lbl">Customer Satisfaction</div>
+    </div>
+  </div>
+</section>    <!-- ============ CONTACT MODAL ============ -->
+    <div class="contact-overlay" id="contactOverlay">
+      <div class="ucard" id="contactCard">
+        <button class="mail" id="mailBtn" aria-label="Send email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+        </button>
+        <div class="profile-pic">
+          <img src="assets/logo.png" alt="A&Z logo" />
+        </div>
+        <div class="bottom">
+          <div class="content">
+            <span class="name">Ahmed Nasrat</span>
+            <span class="about-me">Full Stack Developer — ASP.NET Core &amp; Angular. ahmednasrat16@gmail.com</span>
+          </div>
+          <div class="bottom-bottom">
+            <div class="social-links-container">
+              <a href="https://github.com/ahmed1nasrat" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/ahmed-nasrat-b05867381" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+              </a>
+            </div>
+            <a class="button" href="mailto:ahmednasrat16@gmail.com">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
