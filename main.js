@@ -242,17 +242,24 @@ ScrollTrigger.create({
     document.querySelectorAll(".stat-block .num").forEach((el) => {
       const target = parseFloat(el.dataset.count);
       const span = el.querySelector("span");
-      gsap.to(
-        { v: 0 },
-        {
-          v: target,
-          duration: 2,
-          ease: "power2.out",
-          onUpdate: function () {
-            span.textContent = Math.floor(this.targets()[0].v).toLocaleString();
-          }
+
+      // Each number counts at its own pace and lands on its value independently,
+      // so small numbers (2, 5) don't sit around waiting on the big one (100).
+      // Duration scales with the value, so every counter finishes in its own time.
+      const duration = gsap.utils.clamp(0.4, 1.6, target * 0.016);
+      const proxy = { v: 0 };
+
+      gsap.to(proxy, {
+        v: target,
+        duration: duration,
+        ease: "power2.out",
+        onUpdate: () => {
+          span.textContent = Math.floor(proxy.v).toLocaleString();
+        },
+        onComplete: () => {
+          span.textContent = target.toLocaleString();
         }
-      );
+      });
     });
   },
   once: true
