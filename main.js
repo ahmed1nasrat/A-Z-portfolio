@@ -200,20 +200,18 @@ gsap.from(".eyebrow, .team-head h2", {
   scrollTrigger: { trigger: ".team-head", start: "top 80%" }
 });
 
-gsap.to(".p-card", {
-  opacity: 1,
-  y: 0,
-  duration: 1,
-  stagger: 0.1,
-  ease: "power3.out",
-  scrollTrigger: { trigger: "#projectsGrid", start: "top 80%" }
-});
+// Single tween per card: the old pair ran a .to({ y: 0 }) AND a .from({ y: 70 })
+// over the same y, and with a 1s duration + 0.1s stagger the last card sat well
+// below its row for ~1.4s after the grid scrolled in. Tightened so the cards
+// land together, and clearProps hands transform back to CSS so :hover works.
 gsap.from(".p-card", {
-  y: 70,
-  scale: 0.94,
-  duration: 1,
-  stagger: 0.1,
-  ease: "back.out(1.2)",
+  opacity: 0,
+  y: 24,
+  scale: 0.98,
+  duration: 0.55,
+  stagger: 0.05,
+  ease: "power2.out",
+  clearProps: "transform,opacity",
   scrollTrigger: { trigger: "#projectsGrid", start: "top 80%" }
 });
 
