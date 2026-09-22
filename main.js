@@ -76,6 +76,78 @@ document.querySelectorAll(".card").forEach((card, i) => {
 });
 
 // ============================================================
+// NAV: fixed bar state + active section highlight
+// ============================================================
+const navEl = document.getElementById("nav");
+const navItems = Array.from(document.querySelectorAll(".nav-links a"))
+  .map((link) => ({ link, section: document.querySelector(link.getAttribute("href")) }))
+  .filter((item) => item.section);
+
+function syncNav() {
+  // Solid-ish backdrop once anything has scrolled under the bar
+  navEl.classList.toggle("is-stuck", window.scrollY > 40);
+
+  if (!navItems.length) return;
+
+  const marker = window.scrollY + window.innerHeight * 0.35;
+  let current = navItems[0];
+  navItems.forEach((item) => {
+    const top = item.section.getBoundingClientRect().top + window.scrollY;
+    if (top <= marker) current = item;
+  });
+
+  // A short final section may never reach the marker; the bottom of the page
+  // always belongs to the last link
+  const atBottom =
+    window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+  if (atBottom) current = navItems[navItems.length - 1];
+
+  navItems.forEach((item) => item.link.classList.toggle("is-active", item === current));
+}
+
+window.addEventListener("scroll", syncNav, { passive: true });
+window.addEventListener("resize", syncNav);
+syncNav();
+
+// ============================================================
+// MOBILE NAV DRAWER
+// ============================================================
+const navToggle = document.getElementById("navToggle");
+const navLinksEl = document.getElementById("navLinks");
+const mobileQuery = window.matchMedia("(max-width: 750px)");
+
+function setMenu(open) {
+  navLinksEl.classList.toggle("open", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+  navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
+
+navToggle.addEventListener("click", () => {
+  setMenu(!navLinksEl.classList.contains("open"));
+});
+
+// A tapped link closes the drawer (its own click still scrolls to the section)
+navLinksEl.addEventListener("click", (e) => {
+  if (e.target.closest("a")) setMenu(false);
+});
+
+document.addEventListener("click", (e) => {
+  if (!navLinksEl.classList.contains("open")) return;
+  if (!(e.target instanceof Element)) return;
+  if (e.target.closest("#navLinks") || e.target.closest("#navToggle")) return;
+  setMenu(false);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") setMenu(false);
+});
+
+// Back to the desktop bar: never leave the drawer open
+mobileQuery.addEventListener("change", (e) => {
+  if (!e.matches) setMenu(false);
+});
+
+// ============================================================
 // MOUSE PARALLAX ON CARDS
 // ============================================================
 const hero = document.querySelector(".hero");
@@ -212,7 +284,7 @@ gsap.from(".p-card", {
   stagger: 0.05,
   ease: "power2.out",
   clearProps: "transform,opacity",
-  scrollTrigger: { trigger: "#projectsGrid", start: "top 80%" }
+  scrollTrigger: { trigger: "#projects", start: "top 80%" }
 });
 
 // ============================================================

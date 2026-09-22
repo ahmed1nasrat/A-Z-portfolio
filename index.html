@@ -21,23 +21,30 @@
     <span class="logo-dot"></span>
     A&Z
   </div>
-  <ul class="nav-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Overview</a></li>
-    <li><a href="#">Project & Experience</a></li>
-    <li><a href="#">Statistics</a></li>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#projects">Project & Experience</a></li>
+    <li><a href="#statistics">Statistics</a></li>
   </ul>
-  <button class="nav-cta">
-    Contact US
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-      <line x1="7" y1="17" x2="17" y2="7" />
-      <polyline points="7 7 17 7 17 17" />
-    </svg>
-  </button>
+  <div class="nav-right">
+    <button class="nav-cta">
+      Contact US
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="7" y1="17" x2="17" y2="7" />
+        <polyline points="7 7 17 7 17 17" />
+      </svg>
+    </button>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
   <h1 class="small-team" id="smallTeam">
     <span class="word"><span>Small</span></span>&nbsp;<span class="word"><span>team,</span></span>
   </h1>
@@ -99,7 +106,7 @@
 
 <!-- ============ SECTION 2: TEAM GRID ============ -->
 <section class="team-section">
-  <div class="team-head">
+  <div class="team-head" id="overview">
     <div>
       <div class="eyebrow">FULL-STACK DEVELOPMENT ARCHITECTURE</div>
       <h2>Scalable Integration<br />of <em>Modern Frameworks</em> and <em>Secure Code</em>.</h2>
@@ -107,7 +114,7 @@
   </div>
 
   <!-- ============ PROJECTS GRID ============ -->
-  <div class="projects-grid" id="projectsGrid">
+  <div class="projects-grid" id="projects">
     <article class="p-card p-api">
       <div class="p-top">
      
@@ -175,7 +182,7 @@
 </section>
 
 <!-- ============ SECTION 3: STATS ============ -->
-<section class="stats">
+<section class="stats" id="statistics">
   <div class="stats-inner">
     <h3>Our Work,<br /> <em>In Numbers</em>.</h3>
     <div class="stat-block">
