@@ -664,6 +664,37 @@ body {
   color: var(--orange-2);
   transform: translateX(3px);
 }
+/* Card whose site is not live yet: a muted, non-clickable status line */
+.p-soon {
+  align-self: flex-start;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--mute);
+}
+.p-soon::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--orange-3);
+  animation: p-soon-pulse 1.8s ease-in-out infinite;
+}
+@keyframes p-soon-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
 
 .team-grid {
   max-width: 1280px;
